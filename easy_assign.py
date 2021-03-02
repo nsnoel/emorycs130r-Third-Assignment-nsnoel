@@ -21,6 +21,25 @@ Generate an input array and get an input for a number to search from the user. R
 
 
 '''
+#1
+import random 
+
+def construct_matrix(m,n):
+    matrix = []
+    for i in range(m): 
+        temp_row = []
+        for i in range(n):
+            temp_row.append(random.uniform(0.1,24.5))
+        matrix.append(temp_row)
+    return matrix 
+
+if __name__ == "__main__":
+    m = int(input("Enter row for matrix: "))
+    n = int(input("Enter column for matrix: "))
+    result = construct_matrix(m,n)
+    print(result)
+
+
 #2
  
 import random 
