@@ -21,3 +21,42 @@ Generate an input array and get an input for a number to search from the user. R
 
 
 '''
+#2
+ 
+import random 
+
+def return_below_n(input_list, value):
+    first_list = []
+    for i in input_list:
+        if i < value:
+            first_list.append(i)
+    return first_list  
+
+if __name__ == "__main__":
+    value = int(input("Enter number under 100 to compare with list: "))
+    input_list = [random.randrange(1,100,1) for i in range(5)] 
+    print(f"The list your value will be compared to is: {input_list}")
+    return_below_n(input_list, value) 
+    a = return_below_n(input_list, value)
+    print(f"The values in the list that are less than your inputted value are: {a}") 
+     
+
+#3
+
+def search_for_item(input_list, item):
+    result = -1
+    if item in input_list:
+        result = input_list.index(item)
+    return result 
+
+if __name__ == "__main__":
+    input_list = []
+    number = int(input("How many numbers in array? : "))
+    for i in range(0, number): 
+        input_list.append(int(input(f"Enter value for index {i}: ")))
+    print(input_list)
+    item = int(input("Enter number to search array for: "))
+    print(f"The index for item is : {search_for_item(input_list, item)}")
+
+
+

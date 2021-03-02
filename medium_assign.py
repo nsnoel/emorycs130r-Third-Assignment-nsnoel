@@ -22,3 +22,32 @@ To the function, send an input list such that it has duplicates. Return a new li
 BONUS: If the function has only one line -- +20%
 
 '''
+#1
+
+def string_max_length(strings_list):
+    return max(strings_list, key=len)
+   
+if __name__ == "__main__":
+    strings_list = list()
+    print("Please enter strings for list with 4 values")
+    for i in range(4):
+        strings_list.append(input(f"Enter string value for index number {i} : "))
+    print(f"The list is: {strings_list}")
+    string_max_length(strings_list)
+    a = string_max_length(strings_list)
+    print(f"The longest string is: {a}")
+
+#3
+
+def working_number_set(input_list):
+    return list(set(input_list))
+
+if __name__ == "__main__":
+    input_list = list()
+    print("Enter list with duplicate values.")
+    for i in range(5): 
+        input_list.append(input(f"Enter value for index {i}: "))
+    print(f"The list is: {input_list} ")
+    result = working_number_set(input_list)
+    print(f"The list without duplicate values is : {result}")
+
